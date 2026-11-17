@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1.0",
+  "world": "late-tang-warlord-city",
+  "description": "Fictional world modelled on late-Tang (9th century) warlord-period Chinese cities. Canon is encoded as propositional constraints over entity types; each rule is independently machine-checkable.",
+  "constraint_form": "propositional",
+  "entity_types": {
+    "geography": {
+      "description": "Terrain, waterways, city layout, districts",
+      "example_constraints": [
+        "City is walled; the warlord's residence (ya-cheng) sits inside the inner compound",
+        "Markets are spatially bounded and time-regulated under the fang-shi system"
+      ]
+    },
+    "timeline": {
+      "description": "Reign eras, events with absolute and relative dates",
+      "example_constraints": [
+        "No technology may be referenced whose historical first use postdates the scenario year",
+        "Events must respect recorded causal order of the era"
+      ]
+    },
+    "faction": {
+      "description": "Warlord houses, court, merchants, religious institutions",
+      "example_constraints": [
+        "A faction may only trade goods its era and territory permit",
+        "Post-Huichang (845 CE) monastery construction and ordination are state-controlled"
+      ]
+    },
+    "design_rule": {
+      "description": "Codified historical design knowledge, encoded as checkable propositions",
+      "example_constraints": [
+        "Forbidden-term rules (e.g. New-World crops absent)",
+        "Required-presence rules (e.g. tea culture present, woodblock printing available)"
+      ]
+    }
+  },
+  "rule_fields": [
+    "id", "category", "statement", "scope", "basis",
+    "check.type (forbidden_terms | required_terms)", "check.terms", "enforced"
+  ],
+  "notes": [
+    "required_terms rules are defined but not yet enforced by the v0.1 checker (absence is context-dependent).",
+    "Scope fields map to asset-description fields: food, goods, structures, props, tech, transport, institutions."
+  ]
+}

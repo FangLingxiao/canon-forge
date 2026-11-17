@@ -1,0 +1,132 @@
+{
+  "ruleset": "late-tang-warlord-city",
+  "era": "Late Tang dynasty, 9th century CE (post-845 Huichang suppression baseline)",
+  "rules": [
+    {
+      "id": "LT-MAT-001",
+      "category": "material_anachronism",
+      "statement": "辣椒不得出现于任何食物、调料或货物描述中",
+      "scope": ["food", "goods"],
+      "basis": "辣椒原产美洲，16世纪后才传入中国；晚唐（9世纪）背景中不存在。",
+      "check": { "type": "forbidden_terms", "terms": ["辣椒", "辣椒面", "红油", "剁椒"] },
+      "enforced": true
+    },
+    {
+      "id": "LT-MAT-002",
+      "category": "material_anachronism",
+      "statement": "美洲作物（玉米、土豆、番薯、番茄）不得出现",
+      "scope": ["food", "goods"],
+      "basis": "均为哥伦布大交换后传入的美洲作物，晚唐不存在。",
+      "check": { "type": "forbidden_terms", "terms": ["玉米", "土豆", "马铃薯", "番薯", "番茄"] },
+      "enforced": true
+    },
+    {
+      "id": "LT-MAT-003",
+      "category": "material_anachronism",
+      "statement": "烟草及相关制品不得出现",
+      "scope": ["food", "goods", "props"],
+      "basis": "烟草为美洲作物，明代才传入中国。",
+      "check": { "type": "forbidden_terms", "terms": ["烟草", "香烟", "烟卷", "烟斗"] },
+      "enforced": true
+    },
+    {
+      "id": "LT-MAT-004",
+      "category": "material_anachronism",
+      "statement": "眼镜与玻璃镜不得出现（铜镜允许）",
+      "scope": ["props", "goods"],
+      "basis": "眼镜13世纪才见于欧洲；镀银玻璃镜为19世纪技术。铜镜为中国古代日常用镜。",
+      "check": { "type": "forbidden_terms", "terms": ["眼镜", "近视镜", "玻璃镜", "穿衣镜"] },
+      "enforced": true
+    },
+    {
+      "id": "LT-MAT-005",
+      "category": "material_anachronism",
+      "statement": "现代火柴不得出现",
+      "scope": ["props", "goods"],
+      "basis": "安全火柴为19世纪发明；取火应为火折子、火石火镰。",
+      "check": { "type": "forbidden_terms", "terms": ["火柴"] },
+      "enforced": true
+    },
+    {
+      "id": "LT-TEC-001",
+      "category": "technology_anachronism",
+      "statement": "管形火器（火绳枪、火铳、火炮）不得出现",
+      "scope": ["tech", "props"],
+      "basis": "火药用于军事始于唐末宋初的燃烧与爆炸装置，管形金属火器为元明时期发展。",
+      "check": { "type": "forbidden_terms", "terms": ["火绳枪", "火铳", "火炮", "手枪", "步枪", "子弹"] },
+      "enforced": true
+    },
+    {
+      "id": "LT-TEC-002",
+      "category": "technology_anachronism",
+      "statement": "活字印刷不得出现（雕版印刷允许且已存在）",
+      "scope": ["tech", "goods"],
+      "basis": "毕昇发明泥活字在北宋（11世纪）；晚唐已有雕版印刷（如868年《金刚经》）。",
+      "check": { "type": "forbidden_terms", "terms": ["活字", "活字印刷"] },
+      "enforced": true
+    },
+    {
+      "id": "LT-TEC-003",
+      "category": "technology_anachronism",
+      "statement": "现代水泥与钢筋混凝土结构不得出现",
+      "scope": ["tech", "structures"],
+      "basis": "波特兰水泥为19世纪发明；建筑应为木构、夯土、砖石。",
+      "check": { "type": "forbidden_terms", "terms": ["水泥", "混凝土", "钢筋混凝土"] },
+      "enforced": true
+    },
+    {
+      "id": "LT-ARC-001",
+      "category": "architecture_anachronism",
+      "statement": "悬索桥不得出现（木拱桥、石拱桥允许）",
+      "scope": ["structures"],
+      "basis": "现代悬索桥为19世纪工程形式；中国古代桥梁为梁桥、拱桥体系（如赵州桥，隋）。",
+      "check": { "type": "forbidden_terms", "terms": ["悬索桥", "铁索桥", "斜拉桥"] },
+      "enforced": true
+    },
+    {
+      "id": "LT-INS-001",
+      "category": "institutional_anachronism",
+      "statement": "纸币（交子、宝钞）不得出现，流通货币为铜钱与绢帛",
+      "scope": ["goods", "institutions"],
+      "basis": "交子为北宋（11世纪）纸币；唐代有飞钱（汇兑凭证）而非纸币。",
+      "check": { "type": "forbidden_terms", "terms": ["交子", "宝钞", "纸币", "银票"] },
+      "enforced": true
+    },
+    {
+      "id": "LT-POS-001",
+      "category": "cultural_presence",
+      "statement": "饮茶文化应存在（茶、茶汤、茶肆）",
+      "scope": ["food", "institutions"],
+      "basis": "陆羽《茶经》（780年）标志饮茶普及，晚唐茶肆已常见。",
+      "check": { "type": "required_terms", "terms": ["茶", "茶汤", "茶肆"] },
+      "enforced": false
+    },
+    {
+      "id": "LT-POS-002",
+      "category": "cultural_presence",
+      "statement": "雕版印刷应存在（雕版、刻本、印经）",
+      "scope": ["tech", "goods"],
+      "basis": "唐代雕版印刷成熟，868年《金刚经》为现存最早有明确纪年的雕版印刷品。",
+      "check": { "type": "required_terms", "terms": ["雕版", "刻本", "印经"] },
+      "enforced": false
+    },
+    {
+      "id": "LT-POS-003",
+      "category": "cultural_presence",
+      "statement": "曲辕犁（江东犁）应存在",
+      "scope": ["tech"],
+      "basis": "曲辕犁于唐代晚期成形，标志中国犁耕技术成熟。",
+      "check": { "type": "required_terms", "terms": ["曲辕犁", "江东犁"] },
+      "enforced": false
+    },
+    {
+      "id": "LT-INS-002",
+      "category": "institutional_context",
+      "statement": "藩镇城市应体现牙城/牙兵军事结构",
+      "scope": ["institutions", "structures"],
+      "basis": "晚唐藩镇治所普遍建有牙城，驻牙兵，为藩镇政治军事核心。",
+      "check": { "type": "required_terms", "terms": ["牙城", "牙兵", "牙将"] },
+      "enforced": false
+    }
+  ]
+}

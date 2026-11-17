@@ -1,0 +1,53 @@
+# canon-forge report — demo-market-scene-001
+ruleset: late-tang-warlord-city | era: Late Tang dynasty, 9th century CE (post-845 Huichang suppression baseline)
+enforced rules checked: 10 | violations found: 11
+
+[VIOLATION] LT-MAT-001 (material_anachronism) — field=food, term='辣椒'
+    rule: 辣椒不得出现于任何食物、调料或货物描述中
+    basis: 辣椒原产美洲，16世纪后才传入中国；晚唐（9世纪）背景中不存在。
+
+[VIOLATION] LT-MAT-002 (material_anachronism) — field=food, term='玉米'
+    rule: 美洲作物（玉米、土豆、番薯、番茄）不得出现
+    basis: 均为哥伦布大交换后传入的美洲作物，晚唐不存在。
+
+[VIOLATION] LT-MAT-003 (material_anachronism) — field=goods, term='烟草'
+    rule: 烟草及相关制品不得出现
+    basis: 烟草为美洲作物，明代才传入中国。
+
+[VIOLATION] LT-MAT-004 (material_anachronism) — field=props, term='眼镜'
+    rule: 眼镜与玻璃镜不得出现（铜镜允许）
+    basis: 眼镜13世纪才见于欧洲；镀银玻璃镜为19世纪技术。铜镜为中国古代日常用镜。
+
+[VIOLATION] LT-MAT-005 (material_anachronism) — field=props, term='火柴'
+    rule: 现代火柴不得出现
+    basis: 安全火柴为19世纪发明；取火应为火折子、火石火镰。
+
+[VIOLATION] LT-TEC-001 (technology_anachronism) — field=tech, term='火绳枪'
+    rule: 管形火器（火绳枪、火铳、火炮）不得出现
+    basis: 火药用于军事始于唐末宋初的燃烧与爆炸装置，管形金属火器为元明时期发展。
+
+[VIOLATION] LT-TEC-002 (technology_anachronism) — field=tech, term='活字'
+    rule: 活字印刷不得出现（雕版印刷允许且已存在）
+    basis: 毕昇发明泥活字在北宋（11世纪）；晚唐已有雕版印刷（如868年《金刚经》）。
+
+[VIOLATION] LT-TEC-002 (technology_anachronism) — field=tech, term='活字印刷'
+    rule: 活字印刷不得出现（雕版印刷允许且已存在）
+    basis: 毕昇发明泥活字在北宋（11世纪）；晚唐已有雕版印刷（如868年《金刚经》）。
+
+[VIOLATION] LT-TEC-003 (technology_anachronism) — field=tech, term='水泥'
+    rule: 现代水泥与钢筋混凝土结构不得出现
+    basis: 波特兰水泥为19世纪发明；建筑应为木构、夯土、砖石。
+
+[VIOLATION] LT-ARC-001 (architecture_anachronism) — field=structures, term='悬索桥'
+    rule: 悬索桥不得出现（木拱桥、石拱桥允许）
+    basis: 现代悬索桥为19世纪工程形式；中国古代桥梁为梁桥、拱桥体系（如赵州桥，隋）。
+
+[VIOLATION] LT-INS-001 (institutional_anachronism) — field=goods, term='交子'
+    rule: 纸币（交子、宝钞）不得出现，流通货币为铜钱与绢帛
+    basis: 交子为北宋（11世纪）纸币；唐代有飞钱（汇兑凭证）而非纸币。
+
+Note: 4 rules are defined but not yet enforced at v0.1:
+  - LT-POS-001: 饮茶文化应存在（茶、茶汤、茶肆）
+  - LT-POS-002: 雕版印刷应存在（雕版、刻本、印经）
+  - LT-POS-003: 曲辕犁（江东犁）应存在
+  - LT-INS-002: 藩镇城市应体现牙城/牙兵军事结构

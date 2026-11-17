@@ -1,0 +1,13 @@
+{
+  "asset_id": "demo-market-scene-002",
+  "type": "generated_scene_description",
+  "note": "Compliant demo input: the same market scene, corrected to respect the late-Tang canon.",
+  "fields": {
+    "food": ["胡饼", "茶汤", "鱼脍"],
+    "goods": ["丝绸", "铜钱", "香料", "刻本佛经"],
+    "structures": ["木拱桥", "夯土城墙", "牙城角楼"],
+    "props": ["铜镜", "火折子", "油纸伞"],
+    "tech": ["雕版印刷", "曲辕犁"],
+    "transport": ["牛车", "马匹"]
+  }
+}
